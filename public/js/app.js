@@ -22,8 +22,6 @@ class App extends React.Component {
                         <details>
                             <summary>Edit {instrument.name} Details</summary>
                             <form id={instrument._id} onSubmit={this.updateInstrument}>
-                            <label htmlFor="ytUrl">URL</label>
-                                <br />
 
                                 <label htmlFor="name">Name</label>
                                 <br />
@@ -35,6 +33,7 @@ class App extends React.Component {
                                 />
                                 <br />
 
+                                <label htmlFor="ytUrl">URL</label>
                                 <input
                                 type="text"
                                 id="ytUrl"
