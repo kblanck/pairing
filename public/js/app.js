@@ -1,5 +1,5 @@
 class App extends React.Component {
-<<<<<<< HEAD
+
   state = {
     name: '',
     origin: '',
@@ -51,8 +51,7 @@ componentDidMount = () => {
     })
   })
 }
-=======
->>>>>>> a56356bc36e0abe3d047f1193a9addfe3bdb2f17
+
 
     render = () => {
         return <div>
@@ -76,8 +75,6 @@ componentDidMount = () => {
                         <details>
                             <summary>Edit {instrument.name} Details</summary>
                             <form id={instrument._id} onSubmit={this.updateInstrument}>
-                            <label htmlFor="ytUrl">URL</label>
-                                <br />
 
                                 <label htmlFor="name">Name</label>
                                 <br />
@@ -89,6 +86,7 @@ componentDidMount = () => {
                                 />
                                 <br />
 
+                                <label htmlFor="ytUrl">URL</label>
                                 <input
                                 type="text"
                                 id="ytUrl"
@@ -97,11 +95,11 @@ componentDidMount = () => {
                                 />
                                 <br />
 
-                                <label htmlFor="image">Origin</label>
+                                <label htmlFor="origin">Country of Origin</label>
                                 <br />
                                 <input
                                 type="text"
-                                id="image"
+                                id="origin"
                                 value={instrument.origin}
                                 onChange={this.handleChange}
                                 />
