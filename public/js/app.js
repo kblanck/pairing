@@ -1,5 +1,5 @@
 class App extends React.Component {
-
+    
     render = () => {
         return <div>
             <h1>Instruments of the World</h1>
@@ -43,11 +43,11 @@ class App extends React.Component {
                                 />
                                 <br />
 
-                                <label htmlFor="image">Origin</label>
+                                <label htmlFor="origin">Country of Origin</label>
                                 <br />
                                 <input
                                 type="text"
-                                id="image"
+                                id="origin"
                                 value={instrument.origin}
                                 onChange={this.handleChange}
                                 />
