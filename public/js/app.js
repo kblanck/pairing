@@ -1,5 +1,56 @@
 class App extends React.Component {
-    
+  state = {
+    name: '',
+    origin: '',
+    howOld: '',
+    ytUrl: '',
+    instruments: [],
+  }
+
+  handleChange =  (event) => {
+    this.setState({
+      [event.target.id]: event.target.value,
+    })
+  }
+  handleSubmit = event => {
+  event.preventDefault()
+  axios
+    .post('/instruments', this.state)
+    .then(response =>
+      this.setState({ animals: response.data, name: '', origin: '', howOld: '',ytUrl: '' })
+    )
+}
+
+deleteInstrument = (event) => {
+  axios.delete('/instruments/' + event.target.value).then((response) => {
+    this.setState({
+      instruments: response.data,
+    })
+
+  })
+
+}
+updateInstrument = (event) => {
+  event.preventDefault()
+  const id = event.target.id
+  axios.put('/instruments/' + id, this.state).then((response) => {
+    this.setState({
+      instruments: response.data,
+      name: '',
+      origin: '',
+      howOld: '',
+      ytUrl: '',
+    })
+  })
+}
+componentDidMount = () => {
+  axios.get('/instruments').then((response) => {
+    this.setState({
+      instruments: response.data,
+    })
+  })
+}
+
     render = () => {
         return <div>
             <h1>Instruments of the World</h1>
@@ -105,6 +156,6 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-    <App></App>, 
+    <App></App>,
     document.querySelector('main')
 )
