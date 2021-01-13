@@ -1,4 +1,5 @@
 class App extends React.Component {
+<<<<<<< HEAD
   state = {
     name: '',
     origin: '',
@@ -50,6 +51,8 @@ componentDidMount = () => {
     })
   })
 }
+=======
+>>>>>>> a56356bc36e0abe3d047f1193a9addfe3bdb2f17
 
     render = () => {
         return <div>
