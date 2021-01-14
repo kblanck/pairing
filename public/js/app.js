@@ -62,9 +62,10 @@ componentDidMount = () => {
             <ul>
                 {this.state.instruments.map((instrument) => {
                     return <li key={instrument._id}>
-                        <iframe width="560" height="315" src={instrument.ytUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        {/* <iframe width="560" height="315" src={instrument.ytUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                        <img src={instrument.ytUrl} />
                         <br/>
-                        {instrument.name}
+                        <strong>{instrument.name}</strong>
                         <br/>
                         {instrument.origin}, {instrument.howOld}
                         <br/>
@@ -132,7 +133,7 @@ componentDidMount = () => {
                     <input type="text" id="name" onChange={this.handleChange}/>
                     <br/>
 
-                    <label htmlFor="origin">Origin</label>
+                    <label htmlFor="origin">Country of Origin</label>
                     <br/>
                     <input type="text" id="origin" onChange={this.handleChange}/>
                     <br/>
@@ -142,7 +143,7 @@ componentDidMount = () => {
                     <input type="text" id="howOld" onChange={this.handleChange}/>
                     <br/>
 
-                    <label htmlFor="ytUrl">YouTube Link</label>
+                    <label htmlFor="ytUrl">Media Link</label>
                     <br/>
                     <input type="text" id="ytUrl" onChange={this.handleChange}/>
                     <br/>
