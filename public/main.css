@@ -12,19 +12,18 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.mid {
-    margin-top: -.5em;
-    display: flex;
-    flex-direction: column;
+#mid {
     text-align: center;
 }
 
 ul {
     list-style-type: none;
+    float: none;
 }
 
 li {
     padding: 1em 1em 1em 0;
+    text-align: center;
 }
 
 details {
@@ -50,7 +49,7 @@ input[type=submit] {
     margin-top: 1em;
 }
 
-#addInstrument {
+#add {
     text-align: center;
     font-family: 'Fraunces', serif;
 }
