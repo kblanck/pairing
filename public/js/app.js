@@ -44,6 +44,7 @@ updateInstrument = (event) => {
     })
   })
 }
+
 componentDidMount = () => {
   axios.get('/instruments').then((response) => {
     this.setState({
@@ -52,13 +53,12 @@ componentDidMount = () => {
   })
 }
 
-
     render = () => {
         return <div>
             <h1>Instruments of the World</h1>
 
             <h2>Featured Instruments</h2>
-            <section id="listOfInstruments">
+           <section class="mid">
             <ul>
                 {this.state.instruments.map((instrument) => {
                     return <li key={instrument._id}>
@@ -87,7 +87,8 @@ componentDidMount = () => {
                                 />
                                 <br />
 
-                                <label htmlFor="ytUrl">URL</label>
+                                <label htmlFor="ytUrl">Media Link</label>
+                                <br/>
                                 <input
                                 type="text"
                                 id="ytUrl"

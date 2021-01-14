@@ -12,8 +12,11 @@ h1, h2, h3 {
     text-align: center;
 }
 
-#listOfInstruments {
+.mid {
+    margin-top: -.5em;
     display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 ul {
@@ -21,7 +24,7 @@ ul {
 }
 
 li {
-    padding: 1em;
+    padding: 1em 1em 1em 0;
 }
 
 details {
@@ -41,6 +44,10 @@ button, input[type=submit] {
     border: 1px solid;
     border-radius: 5px;
     font-family: 'Fraunces', serif;
+}
+
+input[type=submit] {
+    margin-top: 1em;
 }
 
 #addInstrument {
