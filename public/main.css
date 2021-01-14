@@ -3,8 +3,13 @@ body {
     font-family: Helvetica;
 }
 
-h1, h3 {
+h1{
+    font-size: 3.5em;
+}
+
+h1, h2, h3 {
     font-family: 'Fraunces', serif;
+    text-align: center;
 }
 
 #listOfInstruments {
@@ -24,12 +29,21 @@ details {
     font-size: .75em;
 }
 
+img {
+    width: 30vh;
+    height: 30%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
 button, input[type=submit] {
-    background-color: white;
+    background-color: ghostwhite;
     border: 1px solid;
     border-radius: 5px;
+    font-family: 'Fraunces', serif;
 }
 
 #addInstrument {
     text-align: center;
+    font-family: 'Fraunces', serif;
 }
