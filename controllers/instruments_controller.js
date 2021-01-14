@@ -1,7 +1,9 @@
 const express = require('express')
 const instruments = express.Router()
 
+
 const Instrument = require('../models/Instrument.js')
+const instrumentSeed = require('../models/instrument_seed.js')
 
 instruments.get('/', (req, res) => {
   Instrument.find({}, (err, foundInstruments) => {
