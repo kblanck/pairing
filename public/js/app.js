@@ -10,7 +10,7 @@ class App extends React.Component {
 
   handleChange =  (event) => {
     this.setState({
-      [event.target.id]: event.target.value,
+      [event.target.id]: event.target.value
     })
   }
   handleSubmit = event => {
@@ -18,7 +18,7 @@ class App extends React.Component {
   axios
     .post('/instruments', this.state)
     .then(response =>
-      this.setState({ instruments: response.data, name: '', origin: '', howOld: '',ytUrl: '' })
+      this.setState({ instruments: response.data, name: '', origin: '', howOld: '', ytUrl: '' })
     )
 }
 
@@ -82,7 +82,7 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="name"
-                                value={instrument.name}
+                                defaultValue={instrument.name}
                                 onChange={this.handleChange}
                                 />
                                 <br />
@@ -92,7 +92,7 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="ytUrl"
-                                value={instrument.ytUrl}
+                                defaultValue={instrument.ytUrl}
                                 onChange={this.handleChange}
                                 />
                                 <br />
@@ -102,7 +102,7 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="origin"
-                                value={instrument.origin}
+                                defaultValue={instrument.origin}
                                 onChange={this.handleChange}
                                 />
                                 <br />
@@ -112,7 +112,7 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="howOld"
-                                value={instrument.howOld}
+                                defaultValue={instrument.howOld}
                                 onChange={this.handleChange}
                                 />
                                 <br />
