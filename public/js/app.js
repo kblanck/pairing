@@ -58,7 +58,7 @@ componentDidMount = () => {
             <h1>Instruments of the World</h1>
 
             <h2>Featured Instruments</h2>
-           <section class="mid">
+            <section id="mid">
             <ul>
                 {this.state.instruments.map((instrument) => {
                     return <li key={instrument._id}>
@@ -120,13 +120,12 @@ componentDidMount = () => {
                                 <input type="submit" value="Update Details" />
                             </form>
                         </details>
-
                     </li>
                 })}
             </ul>
             </section>
 
-            <section id="addInstrument">
+            <section id="add">
                 <h3>Add an Instrument to the Database</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Name</label>
