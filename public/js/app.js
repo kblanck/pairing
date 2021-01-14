@@ -10,7 +10,7 @@ class App extends React.Component {
 
   handleChange =  (event) => {
     this.setState({
-      [event.target.id]: event.target.value,
+      [event.target.id]: event.target.value
     })
   }
   handleSubmit = event => {
@@ -18,7 +18,7 @@ class App extends React.Component {
   axios
     .post('/instruments', this.state)
     .then(response =>
-      this.setState({ instruments: response.data, name: '', origin: '', howOld: '',ytUrl: '' })
+      this.setState({ instruments: response.data, name: '', origin: '', howOld: '', ytUrl: '' })
     )
 }
 
@@ -44,6 +44,7 @@ updateInstrument = (event) => {
     })
   })
 }
+
 componentDidMount = () => {
   axios.get('/instruments').then((response) => {
     this.setState({
@@ -52,13 +53,12 @@ componentDidMount = () => {
   })
 }
 
-
     render = () => {
         return <div>
             <h1>Instruments of the World</h1>
 
             <h2>Featured Instruments</h2>
-            <section id="listOfInstruments">
+           <section class="mid">
             <ul>
                 {this.state.instruments.map((instrument) => {
                     return <li key={instrument._id}>
@@ -82,16 +82,17 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="name"
-                                value={instrument.name}
+                                defaultValue={instrument.name}
                                 onChange={this.handleChange}
                                 />
                                 <br />
 
-                                <label htmlFor="ytUrl">URL</label>
+                                <label htmlFor="ytUrl">Media Link</label>
+                                <br/>
                                 <input
                                 type="text"
                                 id="ytUrl"
-                                value={instrument.ytUrl}
+                                defaultValue={instrument.ytUrl}
                                 onChange={this.handleChange}
                                 />
                                 <br />
@@ -101,7 +102,7 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="origin"
-                                value={instrument.origin}
+                                defaultValue={instrument.origin}
                                 onChange={this.handleChange}
                                 />
                                 <br />
@@ -111,7 +112,7 @@ componentDidMount = () => {
                                 <input
                                 type="text"
                                 id="howOld"
-                                value={instrument.howOld}
+                                defaultValue={instrument.howOld}
                                 onChange={this.handleChange}
                                 />
                                 <br />
