@@ -18,7 +18,7 @@ class App extends React.Component {
   axios
     .post('/instruments', this.state)
     .then(response =>
-      this.setState({ animals: response.data, name: '', origin: '', howOld: '',ytUrl: '' })
+      this.setState({ instruments: response.data, name: '', origin: '', howOld: '',ytUrl: '' })
     )
 }
 
