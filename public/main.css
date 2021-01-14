@@ -1,0 +1,55 @@
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: Helvetica;
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    text-align: center;
+}
+
+#mid {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    float: none;
+}
+
+li {
+    padding: 1em 1em 1em 0;
+    text-align: center;
+}
+
+details {
+    margin-top: .5em;
+    font-size: .75em;
+}
+
+img {
+    width: 30vh;
+    height: 30%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+button, input[type=submit] {
+    background-color: ghostwhite;
+    border: 1px solid;
+    border-radius: 5px;
+    font-family: 'Fraunces', serif;
+}
+
+input[type=submit] {
+    margin-top: 1em;
+}
+
+#add {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+}
